@@ -1,0 +1,229 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  * {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.toptext {
+  text-align: center;
+  padding: 10px;
+}
+
+@media (max-width: 640px) {
+  .toptext {
+    text-align: center;
+  }
+}
+
+.toptext a {
+  text-decoration: none;
+  font-size: 17px;
+  color: #e2c001;
+}
+
+@media (max-width: 640px) {
+  .toptext a {
+    font-size: 14px;
+  }
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px;
+  color: white;
+  margin-bottom: 10px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 5px;
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    padding: 0;
+    margin: 0;
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar #jje {
+    visibility: visible;
+    height: 55px;
+    padding-left: 0;
+  }
+}
+
+.navbar .navlink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 15px;
+  list-style-type: none;
+}
+
+.navbar .navlink .link {
+  padding: 0 10px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.navbar .navlink #just {
+  text-decoration: underline;
+}
+
+.navbar .fas {
+  font-size: 20px;
+  padding: 20px;
+  color: goldenrod;
+}
+
+@media (max-width: 640px) {
+  #hhh {
+    visibility: hidden;
+  }
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  padding: 40px 20px;
+  gap: 20px;
+}
+
+@media (max-width: 640px) {
+  .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    padding: 0 0;
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+
+.grid #jar {
+  font-size: 14px;
+  padding: 5px;
+}
+
+.grid .par {
+  height: 40px;
+  width: 200px;
+  padding: 5px;
+}
+
+.grid .you {
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+}
+
+@media (max-width: 640px) {
+  .grid .you img {
+    height: 200px;
+    width: 300px;
+    background-size: cover;
+  }
+}
+
+.grid .you .linkss a {
+  padding-top: 40px;
+  color: goldenrod;
+  text-decoration: none;
+  text-align: center;
+}
+
+.grid .you .linkss p {
+  color: black;
+  text-align: center;
+  padding-top: 12px;
+  font-weight: bold;
+}
+
+.down {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  margin-top: 35px;
+  margin-bottom: 30px;
+  padding: 0 30px;
+}
+
+@media (max-width: 640px) {
+  .down {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    padding: 0 0;
+  }
+}
+
+.down h5 {
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 640px) {
+  .down h5 {
+    font-size: 14px;
+    padding-bottom: 5px;
+  }
+}
+
+.iconss {
+  font-size: 25px;
+}
+
+.iconss h5 {
+  padding-left: 14px;
+}
+
+.iconss i {
+  padding: 14px;
+}
+
+.bad h5 {
+  padding-left: 30px;
+}
+
+.linn {
+  text-decoration: none;
+  list-style-type: none;
+  color: black;
+}
+
+.badi input {
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 10px;
+}
+
+.badi button {
+  height: 30px;
+  width: 135px;
+  padding-top: 2px;
+  font-size: 13px;
+  background-color: black;
+  color: white;
+  border: none;
+}
+/*# sourceMappingURL=index2.css.map */
