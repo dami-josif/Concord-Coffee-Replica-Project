@@ -1,7 +1,7 @@
 <section>
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand text-uppercase fw-bold" href="index">
+            <a class="navbar-brand text-uppercase fw-bold" href="authentication">
                 <img src="../../../concord_coffee/assets/img/LOGO.jpg" alt="" height="50px">
             </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

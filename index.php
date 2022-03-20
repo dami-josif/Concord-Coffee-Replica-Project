@@ -88,7 +88,7 @@
                             <span class="text-center">
                                 <a class="text-decoration-none text-black fw-bold fs-5 mb-4" href="#">Bright & Balanced</a>
                                 <p>$20.00</p>
-                                <button class="btn btn-dark fw-bold px-4 my-2 text-center buy">BUY</button>
+                                <button class="btn btn-dark fw-bold px-4 my-2 text-center buy">ADD TO CART</button>
                             </span>
                         </div>
                         <div  class="col-lg-4 text-center">
@@ -96,7 +96,7 @@
                             <span>
                                 <a class="text-decoration-none text-black fw-bold fs-5 mb-4" href="#">The Concord Classic</a>
                                 <p>$20.00</p>
-                                <button class="btn btn-dark fw-bold px-4 my-2 buy">BUY</button>
+                                <button class="btn btn-dark fw-bold px-4 my-2 buy">ADD TO CART</button>
                             </span>
                         </div>
                         <div  class="col-lg-4 text-center">
@@ -104,7 +104,7 @@
                             <span>
                                 <a class="text-decoration-none text-black fw-bold fs-5 mb-4" href="#">Sweet & Smooth</a>
                                 <p>$20.00</p>
-                                <button class="btn btn-dark fw-bold px-4 my-2 buy">BUY</button>
+                                <button class="btn btn-dark fw-bold px-4 my-2 buy">ADD TO CART</button>
                             </span>
                         </div>
                    </div>
