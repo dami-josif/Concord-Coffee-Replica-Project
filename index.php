@@ -1,6 +1,11 @@
-<?php include '../concord_coffee/assets/includes/headers1.php' ?>
+<?php 
+    include '../concord_coffee/assets/includes/headers1.php';
+    include 'assets/includes/sessions.php';
+    include_once 'assets/config/dbcon.php';
+    $id = $_SESSION['id'];
+?>
 
-
+<?php echo successMessage(); echo errorMessage(); ?>
 <body>
    <section>
         <header class="toptext">
@@ -38,7 +43,13 @@
            <div class="icon">
                 <i class="fas fa-search"></i>
                 <i class="fas fa-user"></i>
-                <i class="fas fa-shopping-cart"></i>
+                <i class="fas fa-shopping-cart"></i> <span class="bg-danger text-light p-1 rounded-circle">
+                    <?php 
+                        $sql = "SELECT * FROM cart WHERE customer_id = '$id'";
+                        $query = mysqli_query($connectDB,$sql);
+                        echo mysqli_num_rows($query);
+                    ?>
+                </span>
            </div>
            <hr>
        </nav>
@@ -88,7 +99,15 @@
                             <span class="text-center">
                                 <a class="text-decoration-none text-black fw-bold fs-5 mb-4" href="#">Bright & Balanced</a>
                                 <p>$20.00</p>
-                                <button class="btn btn-dark fw-bold px-4 my-2 text-center buy">ADD TO CART</button>
+                                <form action="assets/config/cart_control?name=Bright and Balanced&price=20" method="POST">
+                                    <div class="d-flex justify-content-center">
+                                        <button type="button" class="btn btn-sm btn-outline-dark px-3 fw-bolder fs-3 minus1">-</button>
+                                        <input type="text" name="qty" value="1"  class="form-control-sm w-25 fw-bolder text-center shows1" id="inp">
+                                        <button type="button" class="btn btn-sm btn-outline-dark ps-3 fw-bolder fs-3 plus1">+</button>
+                                    </div>
+                                    <button type="submit" name="b&b" class="btn btn-dark fw-bold px-4 my-2 mt-3 buy">ADD TO CART</button>
+                                </form>
+                                <!-- <a href="assets/config/cart_control?cart=<?php echo $id; ?>&name=Bright and Balanced&price=20&qty=4" class="btn btn-dark fw-bold px-4 my-2 text-center buy">ADD TO CART</a> -->
                             </span>
                         </div>
                         <div  class="col-lg-4 text-center">
@@ -96,7 +115,15 @@
                             <span>
                                 <a class="text-decoration-none text-black fw-bold fs-5 mb-4" href="#">The Concord Classic</a>
                                 <p>$20.00</p>
-                                <button class="btn btn-dark fw-bold px-4 my-2 buy">ADD TO CART</button>
+                                <form action="assets/config/cart_control?name=The concord classic&price=20" method="POST">
+                                    <div class="d-flex justify-content-center">
+                                        <button type="button" class="btn btn-sm btn-outline-dark px-3 fs-3 fw-bolder minus2">-</button>
+                                        <input type="text" name="qty" value="1" class="form-control-sm w-25 fw-bolder text-center shows2" id="inp">
+                                        <button type="button" class="btn btn-sm btn-outline-dark ps-3 fs-3 fw-bolder plus2">+</button>
+                                    </div>
+                                    <button type="submit" name="b&b" class="btn btn-dark fw-bold px-4 my-2 mt-3 buy">ADD TO CART</button>
+                                </form>
+                                <!-- <a href="assets/config/cart_control?cart=<?php //echo $id; ?>&name=The Concord Classic&price=20&qty=4" class="btn btn-dark fw-bold px-4 my-2 text-center buy">ADD TO CART</a> -->
                             </span>
                         </div>
                         <div  class="col-lg-4 text-center">
@@ -104,7 +131,15 @@
                             <span>
                                 <a class="text-decoration-none text-black fw-bold fs-5 mb-4" href="#">Sweet & Smooth</a>
                                 <p>$20.00</p>
-                                <button class="btn btn-dark fw-bold px-4 my-2 buy">ADD TO CART</button>
+                                <form action="assets/config/cart_control?name=Sweet and Smooth&price=20" method="POST">
+                                    <div class="d-flex justify-content-center">
+                                        <button type="button" class="btn btn-sm btn-outline-dark px-3 fs-3 fw-bolder minus3">-</button>
+                                        <input type="text" value="1" name="qty" class="form-control-sm w-25 fw-bolder text-center shows3" id="inp">
+                                        <button type="button" class="btn btn-sm btn-outline-dark ps-3 fs-3 fw-bolder plus3">+</button>
+                                    </div>
+                                    <button type="submit"  name="b&b" class="btn btn-dark fw-bold px-4 my-2 mt-3 buy">ADD TO CART</button>
+                                </form>
+                                <!-- <a href="assets/config/cart_control?cart=<?php //echo $id; ?>&name=Sweet and Smooth&price=20&qty=4" class="btn btn-dark fw-bold px-4 my-2 text-center buy">ADD TO CART</a> -->
                             </span>
                         </div>
                    </div>
@@ -198,7 +233,7 @@
        <div class="mid">
            <h4>Good things happen over coffee.</h4>
            <hr>
-           <p>We believe that warmth and flavor of the perfect cup of coffee soothes souls, firms friendships, and connects community. Our coffee is carefully and thoughtfully <br> grown on some of the best coffee farms around the world, imported by loyal and caring importers and freshly roasted in Lakeland, Florida.  Welcome to the Concord <br> Coffee community.</p>
+           <p class="fs-6">We believe that warmth and flavor of the perfect cup of coffee soothes souls, firms friendships, and connects community. Our coffee is carefully and thoughtfully <br> grown on some of the best coffee farms around the world, imported by loyal and caring importers and freshly roasted in Lakeland, Florida.  Welcome to the Concord <br> Coffee community.</p>
        </div>
    </section>
 
@@ -251,5 +286,23 @@
 </body>
 <footer>
     <script src="../concord_coffee/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../concord_coffee/assets/js/custom.js"></script>
+    <!-- <script>
+        let minus = document.querySelector('.minus1');
+        let plus = document.querySelector('.plus1');
+        let show = document.querySelector('.shows1');
+        let qty = show.value;
+        plus.addEventListener('click',()=>{
+            show.value = qty++;
+        })
+
+        minus.addEventListener('click',()=>{
+          if (show.value == 1) {
+              show.value = 1
+          }else{
+            show.value = qty--
+          }
+        })
+    </script> -->
 </footer>
 </html>

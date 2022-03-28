@@ -137,8 +137,8 @@
     }
 }
 .you img:hover{
-    transition: 1s;
-    transform: scale(1.1);
+    transition: 1s !important;
+    transform: scale(1.1) !important;
     
 }
 

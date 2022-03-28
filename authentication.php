@@ -11,20 +11,33 @@
         }
     </style>
     <?php include_once 'assets/includes/main-nav.php'; ?>
-
+    
     <div class="container pt-4">
         <?php echo successMessage(); echo errorMessage(); ?>
-        <div class="card mx-auto w-50 p-2 mt-5 mb-5 log" style="background-color: chocolate;">
-            <img src="assets/img/LOGO.jpg" height="40px" width="200px" class="m-3"> LOG IN
-            <form action="assets/config/login_control.php" method="post">
-                <input type="email" name="email" placeholder="Email*"  class="form-control mb-3">
-                <input type="password" name="password" placeholder="Password*"  class="form-control mb-2">
-                <a class="nav-link text-dark float-end" onclick="change()">
-                   Click here to Register
-                </a>
+        <div class="container-fluid">
+            <div class="row rep">
+                <div class="col-7">
+                    <h3 class="fs-1 fw-bold" style="font-family: 'Dancing Script', cursive;">Our Products..</h3>
+                    <img class="rounded" src="../concord_coffee/assets/img/IMG_3199_760x.jpg" height="200px" alt="">
+                    <img class="rounded" src="../concord_coffee/assets/img/IMG_3205_760x.jpg" height="200px" alt="">
+                    <img class="rounded" src="../concord_coffee/assets/img/IMG_3210_760x.jpg" height="200px" alt="">
+                    <p class="fw-bold fs-4 mt-3" style="font-family: 'Dancing Script', cursive;">i) Bright & Balanced.. ii) The Concord Classic.. iii) Sweet & Smooth..</p>
+                </div>
+                <div class="col-5">
+                    <div class="card p-2 mt-5 mb-5 log" style="background-color: cream;">
+                        <h5 class="fw-bold mb-4 mt-2" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">LOG IN</h5>
+                        <form action="assets/config/login_control.php" method="post">
+                            <input type="email" name="email" placeholder="Email*"  class="form-control mb-3">
+                            <input type="password" name="password" placeholder="Password*"  class="form-control mb-2">
+                            <a class="nav-link text-dark float-end" onclick="change()">
+                            Click here to Register
+                            </a>
 
-                <button type="submit" name="login" class="btn btn-dark text-light fw-bold">LOGIN</button>
-            </form>
+                            <button type="submit" name="login" class="btn btn-dark text-light fw-bold">LOGIN</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="card mx-auto w-75 d-none p-2 reg mb-5">
@@ -104,6 +117,7 @@
         function change(){
             document.querySelector('.reg').classList.toggle('d-none');
             document.querySelector('.log').classList.toggle('d-none');
+            document.querySelector('.rep').classList.toggle('d-none');
         }
     </script>
 
