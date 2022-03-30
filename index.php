@@ -30,7 +30,24 @@
                     <a href="#" class="link">WHOLESALE</a>
                 </li>
                 <li>
-                    <a href="#" class="link">CONTACT</a>
+                    <div class="dropdown">
+                        <a class="fw-bold text-dark dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            CONTACT
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li>
+                                <a class="nav-link active" aria-current="page" href="tel:+2348142237388">
+                                    +2348142237388
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link active" aria-current="page" href="mailto:emmanuelodobo10@gmail.com">
+                                    <i class="fas fa-envelope"></i> GMAIL
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li id="just">
                     <a href="#" class="link">ORDER FOR IN-STORE PICKUP</a>
@@ -43,7 +60,7 @@
            <div class="icon">
                 <i class="fas fa-search"></i>
                 <i class="fas fa-user"></i>
-                <i class="fas fa-shopping-cart"></i> <span class="bg-danger text-light p-1 rounded-circle">
+               <a href="tunnel/cart"> <i class="fas fa-shopping-cart"></i></a> <span class="bg-danger text-light p-1 rounded-circle">
                     <?php 
                         $sql = "SELECT * FROM cart WHERE customer_id = '$id'";
                         $query = mysqli_query($connectDB,$sql);
@@ -248,6 +265,9 @@
                <i class="fab fa-facebook-f"></i>
                <i class="fab fa-twitter"></i>
                <i class="fab fa-instagram"></i>
+               <a target="_blank" href="https://api.whatsapp.com/send?text=I would like to enquire more on your Coffee Products&phone=+2348147778188">
+                    <i class="fab fa-whatsapp text-black"></i>
+               </a>
            </div>
            <div class="bad">
                <h5>Links</h5>
@@ -283,6 +303,19 @@
             Made by Oluwadamilare</p>
        </div>
    </section>
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/62443c8d0bfe3f4a877074d3/1fvd8p3a8';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 </body>
 <footer>
     <script src="../concord_coffee/assets/js/bootstrap.bundle.min.js"></script>

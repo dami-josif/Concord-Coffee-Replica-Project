@@ -70,6 +70,9 @@
                <i class="fab fa-facebook-f"></i>
                <i class="fab fa-twitter"></i>
                <i class="fab fa-instagram"></i>
+               <a target="_blank" href="https://api.whatsapp.com/send?text=I would like to enquire more on your Coffee Products&phone=+2348147778188">
+                    <i class="fab fa-whatsapp text-black"></i>
+               </a>
            </div>
            <div class="bad">
                <h5>Links</h5>
