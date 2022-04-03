@@ -3,7 +3,7 @@
     include "../assets/includes/headers1.php";
     include "../assets/includes/sessions.php";
     auth();
-    
+    $id = $_SESSION['id'];
 ?>
 <body>
     <?php include '../assets/includes/cart-nav.php' ?>
@@ -58,6 +58,13 @@
             </table>
          </div>
          <div class="text-end">
+           <h4 class="font-monospace">Total: $<?php  
+              $sql = "SELECT SUM(product_price) FROM cart WHERE customer_id='$id'";
+              $query = mysqli_query($connectDB,$sql);
+
+              $row = mysqli_fetch_assoc($query);
+              echo $row['SUM(product_price)'];
+           ?></h4>
            <button class="btn btn-success fw-bold px-3">CHECKOUT</button>
          </div>
        </div>

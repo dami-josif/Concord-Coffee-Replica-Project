@@ -6,6 +6,7 @@ $id = $_SESSION['id'];
         $name = $_GET['name'];
         $price = $_GET['price'];
         $qty = $_POST['qty'];
+        $price = intval($price) * intval($qty);
         $date = date('Y-m-d h:i:s');
         
         

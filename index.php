@@ -81,7 +81,7 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                <iframe width="100%" height="470px" src="https://www.youtube.com/embed/Jaepppfz7us" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="100%" height="470px" src="https://www.youtube.com/embed/Jaepppfz7us" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; muted; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="carousel-item">
                     <img src="../concord_coffee/assets/img/image1.jpg" class="d-block w-100" height="470px"  alt="...">
