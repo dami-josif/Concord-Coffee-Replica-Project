@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 30, 2022 at 04:32 PM
+-- Generation Time: Apr 03, 2022 at 07:52 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.25
 
@@ -41,9 +41,8 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`cart_id`, `customer_id`, `product_name`, `product_price`, `product_qty`, `date_created`) VALUES
-(41, '3', 'Sweet and Smooth', '20', '3', '2022-03-30 03:56:00'),
-(42, '3', 'The concord classic', '20', '4', '2022-03-30 04:17:53'),
-(43, '3', 'Bright and Balanced', '20', '3', '2022-03-30 04:24:52');
+(54, '4', 'The concord classic', '100', '5', '2022-04-02 03:02:11'),
+(55, '4', 'Sweet and Smooth', '80', '4', '2022-04-02 03:02:17');
 
 -- --------------------------------------------------------
 
@@ -70,7 +69,6 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `dob`, `email`, `phone`, `user_password`, `user_role`, `password_reset`, `date_created`) VALUES
 (1, 'Dami', 'Dami', '2018-02-09', 'admin@gmail.com', '+2348147778188', '$2y$10$HPbNYs//2t/mhDRDffmyFe73xS2GaFFpeSlf6IJxYrfY1zY5HVjZK', 'admin', '', '2022-03-18 02:26:16'),
-(3, 'Oluwadamilare', 'joseph', '2010-06-10', 'fef@gmail.com', '+2348147778181', '$2y$10$5j67wew9fA4CUvrdyKnObusfcN6KVfKbXDvyDZYnLru4nMGs0/TKi', 'user', '', '2022-03-19 12:50:29'),
 (4, 'Dami', 'Dami', '2022-03-10', 'fef@gmail.com', '+2348147778188', '$2y$10$2jTWQDhvLcdVfplTi1muYu41C4IropmcZ.wimNbCre3ggxKdR/7qu', 'user', '', '2022-03-21 05:06:08');
 
 --
@@ -97,7 +95,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT for table `users`
